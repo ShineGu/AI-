@@ -1,0 +1,38 @@
+/* pages/home/home.wxss */
+.home {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .button {
+  /* position: absolute;
+  top: 23vh;
+  left: 10vw; */
+}
+
+#button11 {
+  position: absolute;
+  top: 23vh;
+  left: 110rpx;
+}
+
+#button12 {
+  position: absolute;
+  top: 23vh;
+  right: 110rpx;
+}
+
+#button21 {
+  position: absolute;
+  top: 42vh;
+  left: 110rpx;
+}
+
+#button22 {
+  position: absolute;
+  top: 42vh;
+  right: 110rpx;
+}

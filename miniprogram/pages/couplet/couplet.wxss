@@ -1,0 +1,75 @@
+/* pages/couplet/couplet.wxss */
+.couplet {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.couplet .input {
+  width: 375rpx;
+  height: 5vh;
+
+  position: absolute;
+  top: 15vh;
+  left: 50%;
+  transform: translate(-50%);
+
+  border: 1px solid #c0c0c0;
+  border-radius: 8rpx;
+}
+
+.couplet .button {
+  width: 150rpx;
+  height: 5vh;
+
+  position: absolute;
+  top: 22vh;
+  left: 50%;
+  transform: translate(-50%);
+
+  border: 1px solid green;
+  border-radius: 8rpx;
+}
+
+.couplet .label {
+  width: 10vh;
+  height: 44vh;
+
+  border: 1px solid;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.couplet .label .scroll {
+  width: 6vh;
+  height: 40vh;
+
+  position: absolute;
+  top: 2vh;
+
+}
+
+.label .scroll text {
+  width: 6vh;
+  height: 6vh;
+
+  position: relative;
+  margin-top: 2vh;
+  font-size: 6vh;
+}
+
+#label-left {
+  position: absolute;
+  top: 30vh;
+  left: 113rpx;
+}
+
+#label-right {
+  position: absolute;
+  top: 30vh;
+  right: 113rpx;
+}
+

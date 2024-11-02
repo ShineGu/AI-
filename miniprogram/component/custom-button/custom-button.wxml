@@ -1,0 +1,7 @@
+<!--components/custom-button/custom-button.wxml-->
+<view class="custom-button">
+  <button class="button">
+    <image class="image" src="cloud://common-0gtwhhyic77736c7.636f-common-0gtwhhyic77736c7-1330176420/images/button.png" mode="aspectFit"></image>
+    <text class="text">{{title}}</text>
+  </button>
+</view>

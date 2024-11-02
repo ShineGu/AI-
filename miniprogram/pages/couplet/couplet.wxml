@@ -1,0 +1,15 @@
+<!--pages/couplet/couplet.wxml-->
+<view class="couplet">
+  <input class="input" type="text" placeholder="请输入内容" bind:input="inputChange" value="{{inputVal}}"/>
+  <button class="button" bind:tap="showAndclear"></button>
+  <label class="label" id="label-left">
+    <scroll-view class="scroll" scroll-y="true" show-scrollbar="false">
+      <text wx:if="{{showText}}" wx:for="{{showText}}" wx:key="*this">{{item}}</text>
+    </scroll-view>
+  </label>
+  <label class="label" id="label-right">
+    <scroll-view class="scroll" scroll-y="true" show-scrollbar="false">
+      <text wx:if="{{answer}}" wx:for="{{answer}}" wx:key="*this">{{item}}</text>
+    </scroll-view>
+  </label>
+</view>

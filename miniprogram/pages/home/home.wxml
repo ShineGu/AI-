@@ -1,0 +1,12 @@
+<!--pages/home/home.wxml-->
+<view class="home">
+  <image class="home" src="cloud://common-0gtwhhyic77736c7.636f-common-0gtwhhyic77736c7-1330176420/images/background.jpg"></image>
+  <custom-button class="button" id="button11" title="抚琴" bind:tap="Zither">
+  </custom-button>
+  <custom-button class="button" id="button12" title="吟诗" bind:tap="Bard">
+  </custom-button>
+  <custom-button class="button" id="button21" title="赏景" bind:tap="Scene">
+  </custom-button>
+  <custom-button class="button" id="button22" title="作对" bind:tap="Couplet">
+  </custom-button>
+</view>

@@ -1,0 +1,7 @@
+<!--pages/zither/zither.wxml-->
+<view class="zither">
+  <input class="input" type="text" placeholder="请输入诗句" bindinput="onInput" />
+  <button class="button" bind:tap="generateAudio">生成音乐</button>
+  <audio class="audio1" src="{{audioUrl1}}" poster="{{imageUrl1}}" name="{{title1}}" author="" controls></audio>
+  <audio class="audio2" src="{{audioUrl2}}" poster="{{imageUrl2}}" name="{{title2}}" author="" controls></audio>
+</view>

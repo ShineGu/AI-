@@ -1,0 +1,16 @@
+<!--pages/bard/bard.wxml-->
+<view class="bard">
+  <!-- <text class="test">{{aspectRatio}}</text> -->
+  <view class="image-preview" bind:tap="chooseImage" style="width: {{aspectRatio}};">
+    <image class="image" src="{{imageSrc}}" wx:if="{{imageSrc}}"></image>
+    <text class="text" wx:else>选择图片</text>
+  </view>
+  <button class="button" bind:tap="parsePoem">开始创作</button>
+  <label class="label">
+    <text class="biaoti">{{biaoti}}</text>
+    <text class="sentences">{{sentences[0]}}</text>
+    <text class="sentences">{{sentences[1]}}</text>
+    <text class="sentences">{{sentences[2]}}</text>
+    <text class="sentences">{{sentences[3]}}</text>
+  </label>
+</view>

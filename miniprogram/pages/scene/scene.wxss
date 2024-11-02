@@ -1,0 +1,49 @@
+/* pages/scene/scene.wxss */
+.scene {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.scene .input {
+  width: 80%;
+  height: 4vh;
+
+  position: absolute;
+  top: 15vh;
+  left: 50%;
+  transform: translate(-50%);
+
+  border: 1rpx solid;
+
+  font-size: 40rpx;
+}
+
+.scene .button {
+  width: 250rpx;
+  height: 5vh;
+
+  position: absolute;
+  top: 25vh;
+  left: 50%;
+  transform: translate(-50%);
+
+  background-color: aquamarine;
+}
+
+.scene .videoView {
+  width: 650rpx;
+  height: 27vh;
+
+  border: 1rpx solid;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+
+.videoView .video {
+  width: 100%;
+  height: 100%;
+}

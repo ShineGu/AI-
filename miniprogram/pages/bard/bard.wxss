@@ -1,0 +1,89 @@
+/* pages/bard/bard.wxss */
+.bard {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bard .image-preview {
+  height: 30vh;
+  width: 600rpx;
+
+  position: absolute;
+  top: 15vh;
+  left: 50%;
+  transform: translate(-50%);
+
+  border: 1rpx dashed #ccc;
+  background-color: #f2f2f2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+}
+
+.image-preview .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-preview .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.bard .button {
+  width: 300rpx;
+  height: 5vh;
+
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%);
+
+  background-color: aquamarine;
+}
+
+.test {
+  position: absolute;
+  top: 10vh;
+  left: 100rpx;
+}
+
+.bard .label {
+  position: absolute;
+  top: 60vh;
+  left: 50%;
+  transform: translate(-50%);
+
+  width: 600rpx;
+  height: 30vh;
+
+  border: 1rpx solid;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.label .biaoti {
+  position: relative;
+  top: 4vh;
+  font-size: 3vh;
+}
+
+.label .sentences {
+  position: relative;
+  top: 6vh;
+  font-size: large;
+  line-height: 4vh;
+}
