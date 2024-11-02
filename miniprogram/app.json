@@ -1,14 +1,12 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/couplet/couplet",
+    "pages/zither/zither",
     "pages/scene/scene",
-    
     "pages/bard/bard",
     
-    "pages/zither/zither",
+    "pages/couplet/couplet",
     "pages/test/test",
-    
     "pages/logs/logs"
   ],
   "window": {

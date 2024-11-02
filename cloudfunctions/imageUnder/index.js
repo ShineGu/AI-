@@ -6,7 +6,7 @@ const querystring = require('querystring');
 cloud.init({ env: 'common-0gtwhhyic77736c7' }); // 使用当前云环境
 
 exports.main = async (event, context) => {
-  const { imageUrl } = event;
+  const { base64Data } = event; // 从前端接收cloudPath和base64Data
   const API_KEY = '4dlB99pcsw9ynfSzH1K0Cviv';
   const SecretKey = 'sLP9FUByxbsOK0Waiajb0PIWQUBXZwtD';
 
@@ -22,7 +22,7 @@ exports.main = async (event, context) => {
           'Content-Type': 'application/json'
         }
       };
-      
+
       const req = https.request(options, (res) => {
         if (res.statusCode !== 200) {
           reject(new Error(`HTTP Status: ${res.statusCode}`));
@@ -32,17 +32,21 @@ exports.main = async (event, context) => {
         res.on('data', (chunk) => data += chunk);
         res.on('end', () => resolve(JSON.parse(data)));
       });
-      
+
       req.on('error', reject);
-      req.write(JSON.stringify({
-        question: '请描述图片内容',
-        url: imageUrl,
-      }));
+      // 确保base64Data不是undefined
+      if (base64Data) {
+        req.write(JSON.stringify({
+          question: '请描述图片内容',
+          image: base64Data, // 直接使用Base64编码的图片数据
+        }));
+      } else {
+        reject(new Error('Base64 data is undefined'));
+      }
       req.end();
     });
-    console.log(baiduRes);
 
-    return { task_id: baiduRes.data.result.task_id, token };
+    return { task_id: baiduRes.result.task_id, token };
   } catch (err) {
     console.error('Error:', err);
     return { error: '请求失败', message: err.message };
@@ -62,7 +66,7 @@ async function getAccessToken(API_KEY, SecretKey) {
       path: '/oauth/2.0/token',
       method: 'POST',
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
+        'Content-Type': 'application/json',
         'Content-Length': Buffer.byteLength(data)
       }
     };
