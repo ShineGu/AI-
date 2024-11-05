@@ -1,11 +1,13 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/zither/zither",
     "pages/scene/scene",
+    "pages/couplet/couplet",
+    
+    "pages/zither/zither",
+    
     "pages/bard/bard",
     
-    "pages/couplet/couplet",
     "pages/test/test",
     "pages/logs/logs"
   ],

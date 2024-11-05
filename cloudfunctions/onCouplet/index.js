@@ -31,10 +31,10 @@ exports.main = async (event, context) => {
             const response = parsedData.choices[0].message.content;
             resolve({ content: response });
           } else {
-            resolve({ content: '抱歉，未能获取到有效的响应。' });
+            resolve({ content: 'error' });
           }
         } catch (err) {
-          reject({ content: '解析响应失败' });
+          reject({ content: 'error' });
         }
       });
     });

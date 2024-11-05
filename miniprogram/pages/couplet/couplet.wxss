@@ -19,7 +19,7 @@
 }
 
 .couplet .button {
-  width: 150rpx;
+  width: 250rpx;
   height: 5vh;
 
   position: absolute;

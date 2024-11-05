@@ -1,6 +1,6 @@
 <!--pages/scene/scene.wxml-->
 <view class="scene">
-  <input class="input" type="text" placeholder="输入视频描述" bindinput="bindKeyInput" />
+  <input class="input" type="text" placeholder="输入视频描述" bindinput="bindKeyInput" value="{{inputVal}}" />
   <button class="button" bind:tap="handleSend">生成视频</button>
   <view class="videoView">
     <video class="video" src="{{videoUrl}}" controls autoplay wx:if="{{videoUrl}}"></video>

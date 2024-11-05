@@ -1,7 +1,7 @@
 <!--pages/couplet/couplet.wxml-->
 <view class="couplet">
   <input class="input" type="text" placeholder="请输入内容" bind:input="inputChange" value="{{inputVal}}"/>
-  <button class="button" bind:tap="showAndclear"></button>
+  <button class="button" bind:tap="showAndclear">开始作对</button>
   <label class="label" id="label-left">
     <scroll-view class="scroll" scroll-y="true" show-scrollbar="false">
       <text wx:if="{{showText}}" wx:for="{{showText}}" wx:key="*this">{{item}}</text>

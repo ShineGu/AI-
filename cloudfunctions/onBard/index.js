@@ -39,7 +39,7 @@ exports.main = async (event, context) => {
       req.end();
     });
 
-    return resultRes.result.description || resultRes;
+    return resultRes.result.description || '';
   } catch (err) {
     console.error('Error:', err);
     return { error: '请求失败', message: err.message };
