@@ -6,11 +6,11 @@ const querystring = require('querystring');
 cloud.init({ env: 'common-0gtwhhyic77736c7' }); // 使用当前云环境
 
 exports.main = async (event, context) => {
-  const { prompt, style } = event;
+  const { prompt, style, callbackUrl } = event;
   const token = '5f36670de6ca41eba14d09e80df92d8d';
-  // 获取云函数的公网触发URL作为回调URL
-  const callbackUrl = `https://${context.ENV}.service.tcloudbase.com/audioCallback`; // 假设audioCallback是您的回调处理云函数名
-  const url = 'https://api.acedata.cloud/suno/audios';
+  // // 获取云函数的公网触发URL作为回调URL
+  // const callbackUrl = `https://${context.ENV}.service.tcloudbase.com/audioCallback`; // 假设audioCallback是您的回调处理云函数名
+  // const url = 'https://api.acedata.cloud/suno/audios';
 
   try {
     const response = await new Promise((resolve, reject) => {

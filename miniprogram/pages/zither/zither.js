@@ -16,12 +16,25 @@ Page({
     prompt: '',
     style: '',
     task_id: '', // 用于存储任务ID
-    callbackUrl: 'https://webhook.site/dfca089e-4e92-42fe-ba4c-8ca875ce0edf',
+    callbackUrl: 'https://eou2enle3ijfjbk.m.pipedream.net',
   },
 
   onInput: function(e) {
     this.setData({
       userInput: e.detail.value
+    });
+  },
+
+  callRequestBin: function() {
+    wx.cloud.callFunction({
+      name: 'requestBin',
+      data: {},
+      success: function(res) {
+        console.log('success', res.result);
+      },
+      fail: function(err) {
+        console.log('error', err);
+      }
     });
   },
 
