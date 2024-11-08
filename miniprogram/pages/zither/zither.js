@@ -21,7 +21,8 @@ Page({
 
   onInput: function(e) {
     this.setData({
-      userInput: e.detail.value
+      userInput: e.detail.value,
+      inputVal: e.detail.value,
     });
   },
 
@@ -47,10 +48,27 @@ Page({
       duration: 100000,
     })
 
+    that.setData({
+      inputVal: '',
+      audioUrl1: '',
+      imageUrl1: '',
+      title1: '',
+      audioUrl2: '',
+      imageUrl2: '',
+      title2: '',
+      answer: '',
+      prompt: '',
+      style: '',
+      task_id: '', // 用于存储任务ID
+    });
+
     wx.cloud.callFunction({
       name: 'audioGeneral', // 调用生成音频请求的云函数
       data: { prompt: this.data.userInput, style: this.data.style, callbackUrl: this.data.callbackUrl}, // 传递prompt和style
       success: res => {
+        that.setData({
+          userInput: '',
+        });
         if (res.result.error) {
           wx.showToast({ title: res.result.error, icon: 'none' });
         } else {
