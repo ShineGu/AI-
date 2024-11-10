@@ -1,8 +1,21 @@
 <!--pages/scene/scene.wxml-->
 <view class="scene">
+  <button class="home-button" bind:tap="goHome">
+    <text class="text">Home</text>
+  </button>
+  <image class="image" src="cloud://common-0gtwhhyic77736c7.636f-common-0gtwhhyic77736c7-1330176420/images/dog.png"></image>
+  <image class="scene" src="cloud://common-0gtwhhyic77736c7.636f-common-0gtwhhyic77736c7-1330176420/images/607CD72DFAD42EEED9A0178B4D41E7F9.png"></image>
   <input class="input" type="text" placeholder="输入视频描述" bindinput="bindKeyInput" value="{{inputVal}}" />
-  <button class="button" bind:tap="handleSend">生成视频</button>
+
+  <button class="button" bind:tap="handleSend">
+    <text class="text">生成视频</text>
+  </button>
+
   <view class="videoView">
     <video class="video" src="{{videoUrl}}" controls autoplay wx:if="{{videoUrl}}"></video>
+    <text class="text" wx:else>视频预览</text>
   </view>
+
+  <view class="label"></view>
+
 </view>

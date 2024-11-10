@@ -5,7 +5,42 @@ Page({
    * 页面的初始数据
    */
   data: {
+    bard: 0,
+    couplet: 0,
+    scene: 0,
+    zither: 0,
+  },
 
+  onLoad: function() {
+    this.getData();
+    // console.log("okk");
+  },
+
+  getData: function() {
+    // console.log("ok");
+    let that = this;
+    // 获取文件变量值
+    wx.cloud.callFunction({
+      name: 'getData',
+      data: {
+        owner: 'gu-taiyang',
+        repo: 'pipe-dream',
+        path: 'data.txt',
+        giteeToken: '4754bceeb7e1ef81453da3841529b40a',
+      },
+      success: function(res) {
+        that.setData({
+          bard: res.result.data.bard,
+          couplet: res.result.data.couplet,
+          scene: res.result.data.scene,
+          zither: res.result.data.zither
+        });
+        // console.log(that.data.bard);
+      },
+      fail: function(err) {
+        console.error('获取文件变量值失败:', err);
+      },
+    });
   },
 
   Couplet: function() {
@@ -31,13 +66,6 @@ Page({
       url: '/pages/zither/zither',
     });
   },
-  
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
-  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -50,7 +78,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    this.getData();
   },
 
   /**

@@ -1,15 +1,27 @@
 <!--pages/couplet/couplet.wxml-->
 <view class="couplet">
+  <image class="couplet" src="cloud://common-0gtwhhyic77736c7.636f-common-0gtwhhyic77736c7-1330176420/images/6A5D706251DC03EF737AC8F600314AFF.png"></image>
+  <image class="image" src="cloud://common-0gtwhhyic77736c7.636f-common-0gtwhhyic77736c7-1330176420/images/dog.png"></image>
+  <image class="background" id="label-left" src="cloud://common-0gtwhhyic77736c7.636f-common-0gtwhhyic77736c7-1330176420/images/2a9c269f-8b92-4102-ad6f-229477a72b25.png"></image>
+  <image class="background" id="label-right" src="cloud://common-0gtwhhyic77736c7.636f-common-0gtwhhyic77736c7-1330176420/images/2a9c269f-8b92-4102-ad6f-229477a72b25.png"></image>
+
   <input class="input" type="text" placeholder="请输入内容" bind:input="inputChange" value="{{inputVal}}"/>
-  <button class="button" bind:tap="showAndclear">开始作对</button>
+  <button class="button" bind:tap="showAndclear">
+    <text class="text">开始作对</text>
+  </button>
   <label class="label" id="label-left">
     <scroll-view class="scroll" scroll-y="true" show-scrollbar="false">
       <text wx:if="{{showText}}" wx:for="{{showText}}" wx:key="*this">{{item}}</text>
     </scroll-view>
   </label>
-  <label class="label" id="label-right">
+  <view class="label" id="label-right">
     <scroll-view class="scroll" scroll-y="true" show-scrollbar="false">
       <text wx:if="{{answer}}" wx:for="{{answer}}" wx:key="*this">{{item}}</text>
     </scroll-view>
-  </label>
+  </view>
+
+  <button class="home-button" bind:tap="goHome">
+    <text class="text">Home</text>
+  </button>
+  <view class="label-buttom"></view>
 </view>

@@ -1,0 +1,35 @@
+<!-- music-player.wxml -->
+<view class="music-player">
+  <view class="song-info">
+    <image class="album-cover" wx:if="{{currentImage}}" src="{{currentImage}}"></image>
+    <image class="album-cover" wx:else src="cloud://common-0gtwhhyic77736c7.636f-common-0gtwhhyic77736c7-1330176420/icon/暂无图片.png"></image>
+    <view class="song-details">
+      <text class="song-name" wx:if="{{currentName}}">{{currentName}}</text>
+      <text class="song-name" wx:else>暂无音乐</text>
+    </view>
+  </view>
+  <view class="controls">
+    <view class="progress-bar">
+      <text class="current-time">{{currentTime}}</text>
+      <slider class="progress-slider" bindchange="onProgressChange" binddragend="onProgressChange" block-size="16" block-color="#ECCECD" activeColor="#ECCECD" backgroundColor="#ffffff" value="{{sliderValue}}" max="100"></slider>
+      <text class="duration">{{musicDuration}}</text>
+    </view>
+    <view class="control-buttons">
+      <button class="control-button" bindtap="onPrevious">
+        <image class="image" src="cloud://common-0gtwhhyic77736c7.636f-common-0gtwhhyic77736c7-1330176420/icon/icons8-跳转到开始-100.png"></image>
+      </button>
+      <button class="control-button" bindtap="onPlayPause" wx:if="{{playing}}">
+        <image class="image" src="cloud://common-0gtwhhyic77736c7.636f-common-0gtwhhyic77736c7-1330176420/icon/icons8-暂停-100.png"></image>
+      </button>
+      <button class="control-button" bindtap="onPlayPause" wx:else>
+        <image class="image" src="cloud://common-0gtwhhyic77736c7.636f-common-0gtwhhyic77736c7-1330176420/icon/icons8-播放-100.png"></image>
+      </button>
+      <button class="control-button" bindtap="onFastForward">
+        <image class="image" src="cloud://common-0gtwhhyic77736c7.636f-common-0gtwhhyic77736c7-1330176420/icon/icons8-快进-100.png"></image>
+      </button>
+      <button class="control-button" bindtap="onNext">
+        <image class="image" src="cloud://common-0gtwhhyic77736c7.636f-common-0gtwhhyic77736c7-1330176420/icon/icons8-结束-100.png"></image>
+      </button>
+    </view>
+  </view>
+</view>

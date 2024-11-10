@@ -1,6 +1,14 @@
 <!--pages/home/home.wxml-->
 <view class="home">
   <image class="home" src="cloud://common-0gtwhhyic77736c7.636f-common-0gtwhhyic77736c7-1330176420/images/background.jpg"></image>
+  <view class="decoration">
+    <image class="background" src="cloud://common-0gtwhhyic77736c7.636f-common-0gtwhhyic77736c7-1330176420/images/b395b86e-2eb1-451c-99db-7d975ecfd701.png"></image>
+    <text class="text" id="text1">累计生成音乐: {{zither}} 首</text>
+    <text class="text" id="text2">累计生成古诗: {{bard}} 首</text>
+    <text class="text" id="text3">累计生成视频: {{scene}} 个</text>
+    <text class="text" id="text4">累计生成对联: {{couplet}} 副</text>
+  </view>
+
   <custom-button class="button" id="button11" title="抚琴" bind:tap="Zither">
   </custom-button>
   <custom-button class="button" id="button12" title="吟诗" bind:tap="Bard">

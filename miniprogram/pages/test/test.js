@@ -1,66 +1,32 @@
-// pages/test/test.js
+// pages/index/index.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    musicUrl: 'https://cdn1.suno.ai/56f02385-9b68-4e15-9216-ed6823465de1.mp3', // 音乐网址
+    musicDuration: 0 // 音乐时长（秒）
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
+  onLoad: function (options) {
+    // 假设音乐网址是通过页面参数传递的
+    // this.setData({
+    //   musicUrl: options.musicUrl
+    // });
+    this.initAudioContext();
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  initAudioContext: function () {
+    // 创建音频上下文
+    this.audioCtx = wx.createInnerAudioContext();
+    // 设置音频源
+    this.audioCtx.src = this.data.musicUrl;
+    // 监听音频加载状态
+    this.audioCtx.onCanplay(() => {
+      let audioDuration = Math.floor(this.audioCtx.duration); // 获取音频时长（秒）
+      console.log('音频总时长为：', audioDuration);
+      this.setData({
+        musicDuration: audioDuration
+      });
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
-  }
-})
+  // 其他页面逻辑...
+});

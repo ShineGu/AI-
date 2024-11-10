@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "music-player": "/component/music-player/music-player"
+  }
 }

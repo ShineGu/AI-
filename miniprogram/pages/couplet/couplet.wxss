@@ -1,6 +1,6 @@
 /* pages/couplet/couplet.wxss */
 .couplet {
-  position: relative;
+  position: absolute;
   width: 100vw;
   height: 100vh;
 }
@@ -14,28 +14,125 @@
   left: 50%;
   transform: translate(-50%);
 
-  border: 1px solid #c0c0c0;
-  border-radius: 8rpx;
+  /* border: 0rpx solid; */
+  background-color: rgba(128, 128, 128, 0.3);
+  border-radius: 50rpx;
+  
+  font-family: 'spring-regular';
+  color: #73A6A0;
+  font-size: 16px;
+  padding-left: 40rpx;
+
+}
+
+.couplet .background {
+  width: 13vh;
+  height: 49vh;
+
+  /* border: 1px solid; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
 }
 
 .couplet .button {
   width: 250rpx;
-  height: 5vh;
+  height: 6vh;
 
   position: absolute;
-  top: 22vh;
+  top: 23vh;
   left: 50%;
   transform: translate(-50%);
 
-  border: 1px solid green;
-  border-radius: 8rpx;
+  border-radius: 50rpx;
+
+  background-color: #ECCECD;
+}
+
+.couplet .image {
+  width: 7vh;
+  height: 6vh;
+
+  position: absolute;
+  top: 24vh;
+  left: 440rpx;
+  z-index: 1000;
+}
+
+.couplet .home-button {
+  width: 15vh;
+  height: 10vh;
+
+  position: absolute;
+  bottom: 74rpx;
+  left: 50%;
+  transform: translate(-50%);
+  /* border-radius: 100%; */
+
+  /* background-color: #ECCECD; */
+  background-color: rgba(128, 128, 128, 0);
+  z-index: 1000;
+
+  border-radius: 50%;
+  border: 27px solid rgba(128, 128, 128, 0.3);
+  /* box-sizing: border-box; */
+}
+
+.home-button .text {
+  width: 300rpx;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 37rpx;
+  font-family: 'spring';
+
+  /* color: #848861; */
+}
+
+.couplet .label-buttom {
+  width: 750rpx;
+  height: 3vh;
+
+  background-color: rgba(128, 128, 128, 0.3);
+
+  position: absolute;
+  bottom: 8vh;
+  /* z-index: 1000; */
+}
+
+.input-placeholder {
+  font-size: 16px;
+  position: absolute;
+  /* left: 40rpx; */
+  color: #73A6A0;
+  font-family: 'spring-regular';
+}
+
+.button .text {
+  width: 300rpx;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-53%, -50%);
+
+  font-size: 35rpx;
+  font-family: 'spring';
+
+  color: #848861;
+
 }
 
 .couplet .label {
-  width: 10vh;
-  height: 44vh;
+  width: 13vh;
+  height: 49vh;
 
-  border: 1px solid;
+  /* border: 1rpx solid; */
 
   display: flex;
   flex-direction: column;
@@ -45,11 +142,10 @@
 
 .couplet .label .scroll {
   width: 6vh;
-  height: 40vh;
+  height: 43vh;
 
   position: absolute;
   top: 2vh;
-
 }
 
 .label .scroll text {
@@ -59,17 +155,18 @@
   position: relative;
   margin-top: 2vh;
   font-size: 6vh;
+  font-family: 'HYXingKaiF';
 }
 
 #label-left {
   position: absolute;
-  top: 30vh;
-  left: 113rpx;
+  top: 32vh;
+  left: 110rpx;
 }
 
 #label-right {
   position: absolute;
-  top: 30vh;
-  right: 113rpx;
+  top: 32vh;
+  right: 110rpx;
 }
 

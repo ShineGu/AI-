@@ -1,7 +1,19 @@
 <!--pages/zither/zither.wxml-->
 <view class="zither">
+  <image class="zither" src="cloud://common-0gtwhhyic77736c7.636f-common-0gtwhhyic77736c7-1330176420/images/6F29A5A89BE8ED4E09222B9D49CC7A0C.png"></image>
+  <image class="image" src="cloud://common-0gtwhhyic77736c7.636f-common-0gtwhhyic77736c7-1330176420/images/dog.png"></image>
   <input class="input" type="text" placeholder="请输入诗句" bindinput="onInput" value="{{inputVal}}"/>
-  <button class="button" bind:tap="generateAudio">生成音乐</button>
-  <audio class="audio1" src="{{audioUrl1}}" poster="{{imageUrl1}}" name="{{title1}}" author="" controls></audio>
-  <audio class="audio2" src="{{audioUrl2}}" poster="{{imageUrl2}}" name="{{title2}}" author="" controls></audio>
+  <button class="button" bind:tap="generateAudio">
+    <text class="text">生成音乐</text>
+  </button>
+  <!-- <audio class="audio1" src="{{audioUrl1}}" poster="{{imageUrl1}}" name="{{title1}}" author="" controls></audio>
+  <audio class="audio2" src="{{audioUrl2}}" poster="{{imageUrl2}}" name="{{title2}}" author="" controls></audio> -->
+
+  <music-player class="audio" wx:if="{{audioUrl1}}" musicDuration="{{musicDuration}}" imageUrl1="{{imageUrl1}}" imageUrl2="{{imageUrl2}}" audioUrl1="{{audioUrl1}}" audioUrl2="{{audioUrl2}}" title1="{{title1}}" title2="{{title2}}"></music-player>
+  <music-player class="audio" wx:else musicDuration="{{musicDuration}}" imageUrl1="{{imageUrl1}}" imageUrl2="{{imageUrl2}}" audioUrl1="{{audioUrl1}}" audioUrl2="{{audioUrl2}}" title1="{{title1}}" title2="{{title2}}"></music-player>
+
+  <button class="home-button" bind:tap="goHome">
+    <text class="text">Home</text>
+  </button>
+  <view class="label"></view>
 </view>

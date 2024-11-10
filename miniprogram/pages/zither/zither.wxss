@@ -2,37 +2,75 @@
 .zither {
   width: 100vw;
   height: 100vh;
-  position: relative;
+  position: absolute;
 }
 
 .zither .input {
   width: 80%;
-  height: 4vh;
+  height: 5vh;
 
   position: absolute;
   top: 15vh;
   left: 50%;
   transform: translate(-50%);
 
-  border: 1rpx solid;
+  /* border: 0rpx solid; */
+  background-color: rgba(128, 128, 128, 0.3);
+  border-radius: 10px;
+  
+  font-family: 'spring-regular';
+  color: #73A6A0;
+  font-size: 16px;
+  padding-left: 40rpx;
+}
 
-  font-size: 40rpx;
+.input-placeholder {
+  font-size: 16px;
+  position: absolute;
+  /* left: 40rpx; */
+  color: #73A6A0;
+  font-family: 'spring-regular';
+}
+
+.zither .image {
+  width: 7vh;
+  height: 6vh;
+
+  position: absolute;
+  top: 31vh;
+  left: 450rpx;
+  z-index: 1000;
 }
 
 .zither .button {
-  width: 250rpx;
-  height: 5vh;
+  width: 300rpx;
+  height: 7vh;
 
   position: absolute;
-  top: 25vh;
+  top: 28vh;
   left: 50%;
   transform: translate(-50%);
 
-  background-color: aquamarine;
+  background-color: #ECCECD;
 }
 
-.zither .audio1 {
-  /* width: 650rpx; */
+.button .text {
+  width: 300rpx;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-53%, -50%);
+
+  font-size: 45rpx;
+  font-family: 'spring';
+
+  color: #848861;
+
+}
+
+.zither .audio {
+  width: 650rpx;
   /* height: 5vh; */
 
   position: absolute;
@@ -40,15 +78,49 @@
   left: 50%;
   transform: translate(-50%);
 
+  /* background-color: #ECCECD; */
 }
 
-.zither .audio2 {
-  /* width: 650rpx; */
-  /* height: 5vh; */
+.zither .home-button {
+  width: 15vh;
+  height: 10vh;
 
   position: absolute;
-  top: 60vh;
+  bottom: 74rpx;
   left: 50%;
   transform: translate(-50%);
+  /* border-radius: 100%; */
 
+  /* background-color: #ECCECD; */
+  background-color: rgba(128, 128, 128, 0);
+  z-index: 1000;
+
+  border-radius: 50%;
+  border: 27px solid rgba(128, 128, 128, 0.3);
+  /* box-sizing: border-box; */
+}
+
+.home-button .text {
+  width: 300rpx;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 37rpx;
+  font-family: 'spring';
+
+  /* color: #848861; */
+}
+
+.zither .label {
+  width: 750rpx;
+  height: 3vh;
+
+  background-color: rgba(128, 128, 128, 0.3);
+
+  position: absolute;
+  bottom: 8vh;
+  /* z-index: 1000; */
 }

@@ -1,14 +1,11 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/test/test",
     "pages/scene/scene",
     "pages/couplet/couplet",
-    
     "pages/zither/zither",
-    
     "pages/bard/bard",
-    
-    "pages/test/test",
     "pages/logs/logs"
   ],
   "window": {
@@ -17,6 +14,9 @@
     "navigationBarBackgroundColor": "#ffffff",
     "navigationStyle": "custom"
   },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
   "style": "v2",
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",

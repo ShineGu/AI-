@@ -1,2 +1,5 @@
-<!--pages/test/test.wxml-->
-<text>pages/test/test.wxml</text>
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <text>音乐网址：{{musicUrl}}</text>
+  <text>音乐时长：{{musicDuration}} 秒</text>
+</view>

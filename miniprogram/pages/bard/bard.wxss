@@ -1,21 +1,22 @@
 /* pages/bard/bard.wxss */
 .bard {
-  position: relative;
+  position: absolute;
   width: 100vw;
   height: 100vh;
 }
 
 .bard .image-preview {
-  height: 30vh;
+  height: 27vh;
   width: 600rpx;
 
   position: absolute;
-  top: 15vh;
+  top: 12vh;
   left: 50%;
   transform: translate(-50%);
 
-  border: 1rpx dashed #ccc;
-  background-color: #f2f2f2;
+  /* border: 1rpx dashed #ccc;
+  background-color: #f2f2f2; */
+  background-color: rgba(128, 128, 128, 0.3);
 
   display: flex;
   justify-content: center;
@@ -37,20 +38,54 @@
   top: 50%;
   left: 50%;
 
+  font-size: 16px;
+  /* position: absolute; */
+  /* left: 40rpx; */
+  color: #FFEB3B;
+  font-family: 'spring-regular';
+
   transform: translate(-50%, -50%);
 }
 
 .bard .button {
-  width: 300rpx;
-  height: 5vh;
-
   position: absolute;
-  top: 50vh;
+  top: 42vh;
   left: 50%;
   transform: translate(-50%);
 
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
+
+  width: 300rpx;
+  height: 7vh;
+
+  background-color: #ECCECD;
 }
+
+.button .text {
+  width: 300rpx;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-53%, -50%);
+
+  font-size: 45rpx;
+  font-family: 'spring';
+
+  color: #848861;
+
+}
+
+.bard .image-dog {
+  width: 7vh;
+  height: 6vh;
+
+  position: absolute;
+  top: 45vh;
+  left: 450rpx;
+  z-index: 1000;
+}
+
 
 .test {
   position: absolute;
@@ -60,14 +95,15 @@
 
 .bard .label {
   position: absolute;
-  top: 60vh;
+  top: 52vh;
   left: 50%;
   transform: translate(-50%);
 
   width: 600rpx;
   height: 30vh;
+  background-color: rgba(128, 128, 128, 0.3);
 
-  border: 1rpx solid;
+  /* border: 1rpx solid; */
 
   display: flex;
   flex-direction: column;
@@ -78,12 +114,59 @@
 .label .biaoti {
   position: relative;
   top: 4vh;
-  font-size: 3vh;
+  font-size: 60rpx;
+  line-height: 4vh;
+  font-family: 'HYXingKaiF';
 }
 
 .label .sentences {
   position: relative;
   top: 6vh;
-  font-size: large;
+  font-size: 3vh;
   line-height: 4vh;
+  font-family: 'HYXingKaiF';
+}
+
+.bard .home-button {
+  width: 15vh;
+  height: 10vh;
+
+  position: absolute;
+  bottom: 74rpx;
+  left: 50%;
+  transform: translate(-50%);
+  /* border-radius: 100%; */
+
+  /* background-color: #ECCECD; */
+  background-color: rgba(128, 128, 128, 0);
+  z-index: 1000;
+
+  border-radius: 50%;
+  border: 27px solid rgba(128, 128, 128, 0.3);
+  /* box-sizing: border-box; */
+}
+
+.home-button .text {
+  width: 300rpx;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 37rpx;
+  font-family: 'spring';
+
+  /* color: #848861; */
+}
+
+.bard .label-behind {
+  width: 750rpx;
+  height: 3vh;
+
+  background-color: rgba(128, 128, 128, 0.3);
+
+  position: absolute;
+  bottom: 8vh;
+  /* z-index: 1000; */
 }
